@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.task-button {
+  border-radius: 0px;
+}
+
+.task-column {
+  padding: 20px;
+}
+
+.task-card {
+  margin: 20px 0px;
+}
+
+.task-button-new-task {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.task-button-new-login {
+  text-align: right;
+  margin: 10px 0px;
+}
+
+.task-column-spacing {
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .task-button-new-login {
+    text-align: center;
+  }
+}
