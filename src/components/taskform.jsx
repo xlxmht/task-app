@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { create, update } from "../actions";
+import { create, toggleForm } from "../actions";
 
 // class TaskForm extends Component {
 const TaskForm = ({ dispatch }) => {
@@ -20,15 +20,9 @@ const TaskForm = ({ dispatch }) => {
   }
 
   const onFormSubmit = () => {
-    console.log(stateObj);
     dispatch(create(stateObj))
-    _clearForm()
+    dispatch(toggleForm())
   };
-
-  function _clearForm() {
-    stateObj = initialState;
-
-  }
 
   // render () {
   return (

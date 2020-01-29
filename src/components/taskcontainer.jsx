@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TaskColumn from './taskcolumn'
+import TaskColumn from './Taskcolumn/Taskcolumn.container'
 
 const taskTemplates = [
   {
@@ -16,7 +16,7 @@ const taskTemplates = [
   }
 ];
 
-class TaskBar extends Component {
+class TaskContainer extends Component {
   state = {};
   render() {
     return (
@@ -31,4 +31,4 @@ class TaskBar extends Component {
   }
 }
 
-export default TaskBar;
+export default TaskContainer;
