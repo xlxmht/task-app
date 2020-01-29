@@ -6,4 +6,8 @@ const appStore = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+appStore.subscribe(function() {
+  // console.log(appStore.getState());
+})
+
 export default appStore;

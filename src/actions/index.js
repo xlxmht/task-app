@@ -3,11 +3,12 @@ export const UPDATE_TASK = 'UPDATE_TASK';
 export const DELETE_TASK = 'DELETE_TASK';
 
 let taskId = 0;
-export const create = (text) => {
+export const create = (obj) => {
   return {
     type: CREATE_TASK,
     id: taskId++,
-    description: text
+    title: obj.tname,
+    desc: obj.tdesc
   }
 }
 
@@ -25,3 +26,7 @@ export const destroy = (taskId) => {
     type: DELETE_TASK
   }
 }
+
+export const toggleForm = () => ({
+  type: 'TOGGLE_FORM'
+})

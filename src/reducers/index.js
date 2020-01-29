@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
-// import { createTask, deleteTask } from '../actions';
 import tasks from './task';
+import formVisibility from './visibility';
 
 export default combineReducers({
-  tasks
+  tasks,
+  formVisibility
 });

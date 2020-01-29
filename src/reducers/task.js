@@ -13,7 +13,8 @@ const taskReducer = (state = [], action) => {
         ...state,
         {
           id: action.id,
-          description: action.description,
+          title: action.title,
+          description: action.desc,
           status: taskStatus.new
         }
       ];

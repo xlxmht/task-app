@@ -1,15 +1,10 @@
 import React, { Component } from "react";
-import TaskForm from "./taskform";
+import TaskForm from "../taskform";
 
 class Header extends Component {
-  state = {
-    showForm: false
-  };
-
   handleNewTask = () => {
-    this.setState({
-      showForm: !this.state.showForm
-    });
+    const { toggleVisibility } = this.props;
+    toggleVisibility();
   }
   render() {
     return (
@@ -32,7 +27,7 @@ class Header extends Component {
           </div>
         </div>
         <div className="row">
-          {this.state.showForm && (
+          {this.props.formVisibility && (
             <div className="col-md-12">
               <TaskForm />
             </div>
