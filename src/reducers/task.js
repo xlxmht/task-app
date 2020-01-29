@@ -19,14 +19,9 @@ const taskReducer = (state = [], action) => {
         }
       ];
     case UPDATE_TASK:
-      return [
-        ...state,
-        {
-          id: action.id,
-          description: action.description,
-          status: taskStatus[action.status]
-        }
-      ];
+      return state.map(item =>
+        (item.id === action.id) ? { ...item, status: taskStatus[action.status] } : item
+      );
     case DELETE_TASK:
       return [];
     default:

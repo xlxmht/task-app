@@ -12,12 +12,12 @@ export const create = (obj) => {
   }
 }
 
-export const update = (id, text, status) => {
+export const update = (obj) => {
   return {
-    id,
+    id: obj.id,
     type: UPDATE_TASK,
-    description: text,
-    status
+    description: obj.text,
+    status: obj.status
   }
 }
 
