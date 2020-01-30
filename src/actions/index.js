@@ -1,12 +1,14 @@
+import { v4 } from 'uuid';
+
 export const CREATE_TASK = 'CREATE_TASK';
 export const UPDATE_TASK = 'UPDATE_TASK';
 export const DELETE_TASK = 'DELETE_TASK';
 
-let taskId = 0;
+let taskId = v4();
 export const create = (obj) => {
   return {
     type: CREATE_TASK,
-    id: taskId++,
+    id: taskId,
     title: obj.tname,
     desc: obj.tdesc
   }

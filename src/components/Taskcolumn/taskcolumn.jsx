@@ -7,13 +7,15 @@ const TaskColumn = ({ template, tasks }) => {
       <div className="task-column text-center border-bottom">
         <strong>{template.title}</strong>
       </div>
-      <div className="task-column">
-        {
-          tasks.map(item => {
-            return <TaskCard key={item.id} task={item} />
-          })
-        }
-      </div>
+      {
+        tasks.map(item => {
+          return (
+            <div key={item.id} className="task-column">
+              <TaskCard task={item} />
+            </div>
+          )
+        })
+      }
     </div>
   );
 }
